@@ -11,11 +11,11 @@ RUN apt-get install gcc-arm-none-eabi -y
 RUN apt-get install binutils-arm-none-eabi -y
 
 # Install pip
-RUN apt-get -y install python3-pip
+RUN apt install python-pros-cli
 
 # Install pros
 RUN echo "Downloading PROS SDK"
-RUN python3 -m pip install pros-cli
+RUN apt install python-pros-cli
 
 # Build Project
 # Copies file from action repository to the filesystem path `/` of the container
